@@ -221,8 +221,10 @@ class AAE1(model):
         [disc_real_out, disc_real_feature] = self.build_disc_cont(tf.concat((self.z_enc_cont, self.z_enc_cat), axis=-1))
         [disc_fake_out, disc_fake_feature] = self.build_disc_cont(tf.concat((self.z_cont, self.z_cat), axis=-1))
 
-        loss_disc = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels=tf.zero_like(disc_real_out), logits=disc_real_out))
-        loss_disc_fool = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels=tf.ones_like(disc_fake_out), logits=disc_fake_out))
+        loss_disc = tf.add(tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels=tf.ones_like(disc_fake_out), logits=disc_fake_out)),
+                            tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels=tf.zeros_like(disc_real_out), logits=disc_real_out)))
+        loss_disc_fool = tf.add(tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels=tf.zeros_like(disc_fake_out), logits=disc_fake_out)),
+                                tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels=tf.ones_like(disc_real_out), logits=disc_real_out)))
         loss_recon = tf.reduce_mean(tf.square(tf.subtract(self.input, self.dec_out))) #l2 loss
         self.loss = loss_recon
         tf.summary.scalar('loss_recon',loss_recon)
@@ -286,6 +288,7 @@ class AAE1(model):
                         output = tf.layers.Dense(n, self.disc_activation)(output)
                         output = tf.layers.Dropout(0.2)(output, training=True)
         return [output, feature]
+
     """
     def build_disc_cat(self, z):
         # Build discriminator
