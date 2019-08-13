@@ -10,7 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from datetime import datetime
 
-os.environ["CUDA_VISIBLE_DEVICES"]="0"
+os.environ["CUDA_VISIBLE_DEVICES"]="1"
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 
@@ -123,9 +123,9 @@ for task in range(5):
     data = datasets.split_mnist(np.arange(2 * (task + 1)), [])
     [train_data, train_labels] = data.get_train_samples()
     train_data = train_data / 255.0
-    acc_train = utils.acc_AAE(train_data, train_labels, sess, model, batch_size, learning_rate, data_ph, labels_ph,
+    acc_train_pre = utils.acc_AAE(train_data, train_labels, sess, model, batch_size, learning_rate, data_ph, labels_ph,
                               batch_size_ph, shufflebuffer_ph, epochs_ph, iterator, num_classes, cat_latent_size)
-    print("Accuracy on Task{} for all previous data:{}".format(task, acc_train))
+    print("Accuracy on Task{} for all previous data:{}".format(task, acc_train_pre))
     # Load current data
     data = datasets.split_mnist([2 * task], [2 * task + 1])
     [train_data, train_labels] = data.get_train_samples()
@@ -133,7 +133,7 @@ for task in range(5):
     acc_train_curr = utils.acc_AAE(train_data, train_labels, sess, model, batch_size, learning_rate, data_ph, labels_ph,
                                    batch_size_ph, shufflebuffer_ph, epochs_ph, iterator, num_classes, cat_latent_size)
     print("Accuracy on Task{} for current data:{}".format(task, acc_train_curr))
-    acc_summary.append(acc_train)
+    acc_summary.append(acc_train_pre)
 
 # Save results
 utils.result_saver(acc_summary, hp_dict, log_path_dt)
