@@ -136,7 +136,7 @@ for task in range(5):
     acc_summary.append(acc_train_pre)
 
 # Save results
-utils.result_saver(acc_summary, hp_dict, log_path_dt)
+utils.result_saver1(acc_summary, hp_dict, log_path_dt)
 
 
 
