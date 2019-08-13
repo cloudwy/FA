@@ -93,6 +93,7 @@ repl_data = []
 for task in range(5):
     #Reinitialize optimizers
     sess.run(tf.variables_initializer(model.opt_recon.variables()))
+
     #Load data for training
     data = datasets.split_mnist([2 * task], [2 * task + 1])
     [train_data, train_labels] = data.get_train_samples()
@@ -112,7 +113,6 @@ for task in range(5):
 
     sess.run(iterator.initializer, feed_dict={data_ph: train_data, labels_ph: train_labels, batch_size_ph: batch_size,
                                               shufflebuffer_ph: train_data.shape[0], epochs_ph: epochs})
-
 
     #Train model
     i = 0

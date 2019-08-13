@@ -85,12 +85,14 @@ acc_summary = []
 for task in range(5):
     #Reinitialize optimizers
     sess.run(tf.variables_initializer(model.opt_recon.variables()))
+
     #Load data for training
     data = datasets.split_mnist([2 * task], [2 * task + 1])
     [train_data, train_labels] = data.get_train_samples()
     train_data = train_data / 255.0
     sess.run(iterator.initializer, feed_dict={data_ph: train_data, labels_ph: train_labels, batch_size_ph: batch_size,
                                               shufflebuffer_ph: train_data.shape[0], epochs_ph: epochs})
+
     #Train model
     i = 0
     while True:
@@ -105,6 +107,7 @@ for task in range(5):
         except tf.errors.OutOfRangeError:
             break
     print("End Training model for task{}".format(task))
+
     #Generate and save generative images
     sess.run(iterator.initializer, feed_dict={data_ph: train_data, labels_ph: train_labels, batch_size_ph: batch_size,
                                               shufflebuffer_ph: train_data.shape[0], epochs_ph: epochs})
@@ -127,8 +130,8 @@ for task in range(5):
     plt.savefig(fname, format="png")
     plt.close()
     print("End save generated images{}".format(task))
+
     #Compute accuracy
-    #data = datasets.split_mnist(np.arange(2*(task+1)))
     data = datasets.split_mnist(np.arange(2*(task+1)),[])
     [train_data, train_labels] = data.get_train_samples()
     train_data = train_data / 255.0
