@@ -83,9 +83,8 @@ for task in range(5):
     # Reinitialize optimizers
     sess.run(tf.variables_initializer(model.opt_disc.variables() + model.opt_recon.variables() + model.opt_fool.variables()))
     # Load data for training
-    #data = datasets.split_mnist([2*task], [2*task+1])
-    data = datasets.split_fashion_mnist([2 * task], [2 * task + 1])
-
+    data = datasets.split_mnist([2*task], [2*task+1])
+    #data = datasets.split_fashion_mnist([2 * task], [2 * task + 1])
     [train_data, train_labels] = data.get_train_samples()
     train_data = train_data / 255.0
     if task > 0:
@@ -119,61 +118,22 @@ for task in range(5):
     utils.plot_gen_imgs(sess, model, N_plot, log_path_dt, task)
 
     # Compute accuracy
-    # Evaluate the AAE on all tasks individually
     acc_list = []
-    for task_acc in range(5):
-        if task_acc > task:
-            acc=0
-        else:
-            # Load data for evaluation on one task
-            #data = datasets.split_mnist([2 * task_acc], [2 * task_acc + 1])
-            data = datasets.split_fashion_mnist([2 * task_acc], [2 * task_acc + 1])
-            [train_data, train_labels] = data.get_train_samples()
-            train_data = train_data / 255.0
-
-            # Get all cluster assignments for training data
-            sess.run(iterator.initializer,
-                     feed_dict={data_ph: train_data, labels_ph: train_labels, batch_size_ph: batch_size,
-                                shufflebuffer_ph: train_data.shape[0], epochs_ph: 1})
-
-            label = []
-            cluster = []
-            while True:
-                try:
-                    [label_tmp, cluster_tmp] = sess.run([model.label, model.z_enc_cat],
-                                                        feed_dict={model.batch_size: batch_size,
-                                                                   model.learning_rate: learning_rate,
-                                                                   model.b_replay: False,
-                                                                   model.repl_batch_size: batch_size})
-                    label.append(label_tmp)
-                    cluster.append(cluster_tmp)
-                except tf.errors.OutOfRangeError:
-                    break
-
-            label = np.concatenate(label, axis=0)
-            cluster = np.concatenate(cluster, axis=0)
-
-            # Compute cluster accuracy
-            counts = np.zeros((cat_latent_size, num_classes), dtype=np.float32)
-
-            for i in range(label.shape[0]):
-                j = np.argmax(cluster[i, :], axis=0)
-                k = np.int32(label[i])
-                counts[j, k] += 1
-            cluster_label = np.argmax(counts, axis=1)
-
-            acc = 0
-            for i in range(label.shape[0]):
-                idx = np.argmax(cluster[i, :], axis=0)
-                if (label[i] == cluster_label[idx]):
-                    acc += 1
-            acc /= np.float32(label.shape[0])
-            print("Accuracy on task {}/{}: {}".format(2 * task_acc, 2 * task_acc + 1,acc))
-            #print("Cluster accuracy: {}".format(acc))
-        acc_list.append(acc)
-        #tf.summary.scalar('acc',acc)
-        #fw.add_summary(acc,task_acc)
-    acc_summary.append(acc_list)
+    # Load all previous data
+    data = datasets.split_mnist(np.arange(2 * (task + 1)), [])
+    [train_data, train_labels] = data.get_train_samples()
+    train_data = train_data / 255.0
+    acc_train = utils.acc_AAE(train_data, train_labels, sess, model, batch_size, learning_rate, data_ph, labels_ph,
+                              batch_size_ph, shufflebuffer_ph, epochs_ph, iterator, num_classes, cat_latent_size)
+    print("Accuracy on Task{} for all previous data:{}".format(task, acc_train))
+    # Load current data
+    data = datasets.split_mnist([2 * task], [2 * task + 1])
+    [train_data, train_labels] = data.get_train_samples()
+    train_data = train_data / 255.0
+    acc_train_curr = utils.acc_AAE(train_data, train_labels, sess, model, batch_size, learning_rate, data_ph, labels_ph,
+                                   batch_size_ph, shufflebuffer_ph, epochs_ph, iterator, num_classes, cat_latent_size)
+    print("Accuracy on Task{} for current data:{}".format(task, acc_train_curr))
+    acc_summary.append(acc_train)
 
 # Save results
 utils.result_saver(acc_summary, hp_dict, log_path_dt)

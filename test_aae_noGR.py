@@ -107,15 +107,15 @@ for task in range(5):
     # Generate and save generative images
     utils.plot_gen_imgs(sess, model, N_plot, log_path_dt, task)
     # Compute accuracy
-    # Evaluate the AAE on all tasks individually
     acc_list = []
-    # Load data for evaluation on one task
+    #Load all previous data
     data = datasets.split_mnist(np.arange(2*(task+1)),[])
     [train_data, train_labels] = data.get_train_samples()
     train_data = train_data / 255.0
     acc_train = utils.acc_AAE(train_data, train_labels, sess, model, batch_size, learning_rate, data_ph, labels_ph,
                               batch_size_ph, shufflebuffer_ph, epochs_ph,iterator, num_classes, cat_latent_size)
     print("Accuracy on Task{} for all previous data:{}".format(task,acc_train))
+    #Load current data
     data = datasets.split_mnist([2 * task], [2 * task + 1])
     [train_data, train_labels] = data.get_train_samples()
     train_data = train_data / 255.0
