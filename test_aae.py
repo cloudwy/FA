@@ -112,20 +112,26 @@ for j in range(N_plot):
     for k in range(N_plot):
         img[j*28:(j+1)*28, k*28:(k+1)*28] = np.reshape(gen_imgs[j*N_plot+k, :], [28, 28])
 plt.imshow(img)
-dt = datetime.now().strftime("%Y_%m_%d_%H_%M")
-#fname = "./pics/gen_imgs_AAE_"+dt
+#dt = datetime.now().strftime("%Y_%m_%d_%H_%M")
 fname = log_path_dt+"/"+"gen_imgs_AAE"
 plt.savefig(fname, format="png")
 plt.close()
 print("End generate and save images")
 
-#Computate acc_train
+#Computate acc_train and acc_test
+#acc_train
 acc_train = utils.acc_AAE(train_data,train_labels,sess,model,batch_size,learning_rate,data_ph,labels_ph,batch_size_ph,shufflebuffer_ph,epochs_ph,
            iterator,num_classes,cat_latent_size)
 print("Cluster accuracy for Train_data: {}".format(acc_train))
+#acc_test
+[test_data, test_labels] = data.get_eval_samples()
+test_data = test_data / 255.0
+acc_test = utils.acc_AAE(test_data,test_labels,sess,model,batch_size,learning_rate,data_ph,labels_ph,batch_size_ph,shufflebuffer_ph,epochs_ph,
+           iterator,num_classes,cat_latent_size)
+print("Cluster accuracy for Test_data: {}".format(acc_test))
 
 # Save results
-utils.result_saver1(acc_train, hp_dict, log_path_dt)
+utils.result_saver(acc_train, acc_test, hp_dict, log_path_dt)
 
 
 
