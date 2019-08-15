@@ -75,6 +75,7 @@ def create_tensorboard(sess, log_path):
     return fw, log_path_dt
 
 def result_saver(acc_train,acc_test, hp_dict, log_path):
+    # for all data
     # Create log path if it does not exist
     dt = datetime.now().strftime("%Y_%m_%d_%H_%M")
     log_path_dt = log_path + "/" + dt
@@ -96,7 +97,8 @@ def result_saver(acc_train,acc_test, hp_dict, log_path):
         for key, val in hp_dict.items():
             f.write(key.ljust(25)+": "+str(val)+"\n")
 
-def result_saver1(acc_train, hp_dict, log_path):
+def result_saver1(acc_pre,acc_curr, hp_dict, log_path):
+    # for generative replay
     # Create log path if it does not exist
     dt = datetime.now().strftime("%Y_%m_%d_%H_%M")
     log_path_dt = log_path + "/" + dt
@@ -105,9 +107,13 @@ def result_saver1(acc_train, hp_dict, log_path):
     # Save hyperparameters and metrics in a log folder
     with open(filename, "w") as f:
         f.write("+---------------------------+\n")
-        f.write("| Accuracy_Train            |\n")
+        f.write("| Accuracy_Pre            |\n")
         f.write("+---------------------------+\n")
-        f.write(str(acc_train)+"\n")
+        f.write(str(acc_pre)+"\n")
+        f.write("+---------------------------+\n")
+        f.write("| Accuracy_Curr             |\n")
+        f.write("+---------------------------+\n")
+        f.write(str(acc_curr) + "\n")
         f.write("+---------------------------+\n")
         f.write("| Hyperparameters           |\n")
         f.write("+---------------------------+\n")
@@ -149,6 +155,43 @@ def acc_AAE(train_data,train_labels,sess,model,batch_size,learning_rate,data_ph,
     acc /= np.float32(label.shape[0])
     return acc
 
+def acc_AAE2(train_data,train_labels,sess,model,batch_size,learning_rate,data_ph,labels_ph,batch_size_ph,shufflebuffer_ph,epochs_ph,
+           iterator,num_classes,cat_latent_size,momentum_recon,momentum):
+    # for the model AAE2: change optimizer and add momentum
+    # Get all cluster assignments for training data
+    sess.run(iterator.initializer, feed_dict={data_ph: train_data, labels_ph: train_labels, batch_size_ph: batch_size,
+                                              shufflebuffer_ph: train_data.shape[0], epochs_ph: 1})
+    label = []
+    cluster = []
+    while True:
+        try:
+            [label_tmp, cluster_tmp] = sess.run([model.label, model.z_enc_cat], feed_dict={model.batch_size: batch_size,
+                                                                                           model.learning_rate: learning_rate,
+                                                                                           model.b_replay: False,
+                                                                                           model.repl_batch_size: batch_size,
+                                                                                           model.momentum_recon:momentum_recon,
+                                                                                           model.momentum:momentum})
+            label.append(label_tmp)
+            cluster.append(cluster_tmp)
+        except tf.errors.OutOfRangeError:
+            break
+    label = np.concatenate(label, axis=0)
+    cluster = np.concatenate(cluster, axis=0)
+    # Compute cluster accuracy
+    counts = np.zeros((cat_latent_size, num_classes), dtype=np.float32)
+    for i in range(label.shape[0]):
+        j = np.argmax(cluster[i, :], axis=0)
+        k = np.int32(label[i])
+        counts[j, k] += 1
+
+    cluster_label = np.argmax(counts, axis=1)
+    acc = 0
+    for i in range(label.shape[0]):
+        idx = np.argmax(cluster[i, :], axis=0)
+        if (label[i] == cluster_label[idx]):
+            acc += 1
+    acc /= np.float32(label.shape[0])
+    return acc
 
 def acc_AE(data,labels,sess,model,batch_size,learning_rate,data_ph,labels_ph,batch_size_ph,shufflebuffer_ph,epochs_ph,
            iterator,n_clusters,num_classes):
