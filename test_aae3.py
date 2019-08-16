@@ -29,7 +29,7 @@ dec_im_shape = [7, 7, 32]
 dec_filters = [32, 32, 1]
 ##discriminator network
 disc_neurons = [400, 300, 1]
-epochs = 100
+epochs = 1
 batch_size = 256
 learning_rate = 0.001
 momentum_recon = 0.9
@@ -53,7 +53,7 @@ iterator = dataset.make_initializable_iterator()
 [batch_data, batch_labels] = iterator.get_next()
 
 # Create AAE
-model = models.AAE(batch_data, batch_labels, cont_latent_size, cat_latent_size, img_size, enc_neurons, enc_filters, dec_neurons, dec_im_shape, dec_filters, disc_neurons)
+model = models.AAE3(batch_data, batch_labels, cont_latent_size, cat_latent_size, img_size, enc_neurons, enc_filters, dec_neurons, dec_im_shape, dec_filters, disc_neurons)
 
 # Start tf session
 sess = tf.Session(config=config)
@@ -124,13 +124,13 @@ print("End generate and save images")
 
 #Computate acc_train and acc_test
 #acc_train
-acc_train = utils.acc_AAE(train_data,train_labels,sess,model,batch_size,learning_rate,data_ph,labels_ph,batch_size_ph,shufflebuffer_ph,epochs_ph,
+acc_train = utils.acc_AAE2(train_data,train_labels,sess,model,batch_size,learning_rate,data_ph,labels_ph,batch_size_ph,shufflebuffer_ph,epochs_ph,
            iterator,num_classes,cat_latent_size,momentum_recon,momentum)
 print("Cluster accuracy for Train_data: {}".format(acc_train))
 #acc_test
 [test_data, test_labels] = data.get_eval_samples()
 test_data = test_data / 255.0
-acc_test = utils.acc_AAE(test_data,test_labels,sess,model,batch_size,learning_rate,data_ph,labels_ph,batch_size_ph,shufflebuffer_ph,epochs_ph,
+acc_test = utils.acc_AAE2(test_data,test_labels,sess,model,batch_size,learning_rate,data_ph,labels_ph,batch_size_ph,shufflebuffer_ph,epochs_ph,
            iterator,num_classes,cat_latent_size,momentum_recon,momentum)
 print("Cluster accuracy for Test_data: {}".format(acc_test))
 
