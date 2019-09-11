@@ -18,7 +18,7 @@ config.gpu_options.allow_growth = True
 
 # Constants
 cont_latent_size = 10 #in paper:10
-n_clusters = 30
+n_clusters = 16
 img_size = [28, 28, 1]
 
 

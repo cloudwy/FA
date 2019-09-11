@@ -81,7 +81,8 @@ hp_dict = {
 [fw,log_path_dt]=utils.create_tensorboard(sess,log_path)
 
 #Start Sequential Learining
-acc_summary = []
+acc_pre = []
+acc_curr = []
 for task in range(5):
     #Reinitialize optimizers
     sess.run(tf.variables_initializer(model.opt_recon.variables()))
@@ -132,21 +133,25 @@ for task in range(5):
     print("End save generated images{}".format(task))
 
     #Compute accuracy
+    #Load previous data
     data = datasets.split_mnist(np.arange(2*(task+1)),[])
     [train_data, train_labels] = data.get_train_samples()
     train_data = train_data / 255.0
-    acc = utils.acc_AE(train_data, train_labels, sess, model, batch_size, learning_rate, data_ph, labels_ph,
+    acc_train_pre = utils.acc_AE(train_data, train_labels, sess, model, batch_size, learning_rate, data_ph, labels_ph,
                              batch_size_ph, shufflebuffer_ph,epochs_ph, iterator, n_clusters, num_classes)
-    print("Accuracy on Task{} for all previous data:{}".format(task,acc))
+    print("Accuracy on Task{} for all previous data:{}".format(task,acc_train_pre))
+    acc_pre.append(acc_train_pre)
+    #Load current data
     data = datasets.split_mnist([2*task],[2*task+1])
     [train_data,train_labels] = data.get_train_samples()
-    acc_current = utils.acc_AE(train_data, train_labels, sess, model, batch_size, learning_rate, data_ph, labels_ph,
+    train_data = train_data / 255.0
+    acc_train_curr = utils.acc_AE(train_data, train_labels, sess, model, batch_size, learning_rate, data_ph, labels_ph,
                              batch_size_ph, shufflebuffer_ph,epochs_ph, iterator, n_clusters, num_classes)
-    print("Accuracy on Task{} for current data:{}".format(task, acc_current))
-    acc_summary.append(acc)
+    print("Accuracy on Task{} for current data:{}".format(task, acc_train_curr))
+    acc_curr.append(acc_train_curr)
 
 # Save results
-utils.result_saver1(acc_summary, hp_dict, log_path_dt)
+utils.result_saver1(acc_pre,acc_curr, hp_dict, log_path_dt)
 
 
 
