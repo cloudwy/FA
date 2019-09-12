@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 from sklearn.manifold import TSNE
 
-os.environ["CUDA_VISIBLE_DEVICES"]="2"
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 
@@ -82,13 +82,12 @@ hp_dict = {
 
 #Start Sequential Learining
 acc_pre = []
-acc_curr = []
 for task in range(5):
     #Reinitialize optimizers
     sess.run(tf.variables_initializer(model.opt_recon.variables()))
 
     #Load data for training
-    data = datasets.split_mnist([2 * task], [2 * task + 1])
+    data = datasets.split_mnist(np.arange(2*(task+1)),[])
     [train_data, train_labels] = data.get_train_samples()
     train_data = train_data / 255.0
     sess.run(iterator.initializer, feed_dict={data_ph: train_data, labels_ph: train_labels, batch_size_ph: batch_size,
@@ -119,7 +118,7 @@ for task in range(5):
             org_img[j * 28:(j + 1) * 28, k * 28:(k + 1) * 28] = np.reshape(org_imgs[j * N_plot + k, :], [28, 28])
     plt.imshow(org_img)
     dt = datetime.now().strftime("%Y_%m_%d_%H_%M")
-    fname = log_path_dt + "/" + "org_imgs_AE_noGR"+str(task)
+    fname = log_path_dt + "/" + "org_imgs_AE_upp"+str(task)
     plt.savefig(fname, format="png")
     print("End save original images{}".format(task))
     gen_img = np.zeros((28 * N_plot, 28 * N_plot), dtype=np.float32)
@@ -127,31 +126,19 @@ for task in range(5):
         for k in range(N_plot):
             gen_img[j * 28:(j + 1) * 28, k * 28:(k + 1) * 28] = np.reshape(gen_imgs[j * N_plot + k, :], [28, 28])
     plt.imshow(gen_img)
-    fname = log_path_dt + "/" + "gen_imgs_AE_noGR"+str(task)
+    fname = log_path_dt + "/" + "gen_imgs_AE_upp"+str(task)
     plt.savefig(fname, format="png")
     plt.close()
     print("End save generated images{}".format(task))
 
     #Compute accuracy
-    #Load previous data
-    data = datasets.split_mnist(np.arange(2*(task+1)),[])
-    [train_data, train_labels] = data.get_train_samples()
-    train_data = train_data / 255.0
     acc_train_pre = utils.acc_AE(train_data, train_labels, sess, model, batch_size, learning_rate, data_ph, labels_ph,
                              batch_size_ph, shufflebuffer_ph,epochs_ph, iterator, n_clusters, num_classes)
     print("Accuracy on Task{} for all previous data:{}".format(task,acc_train_pre))
     acc_pre.append(acc_train_pre)
-    #Load current data
-    data = datasets.split_mnist([2*task],[2*task+1])
-    [train_data,train_labels] = data.get_train_samples()
-    train_data = train_data / 255.0
-    acc_train_curr = utils.acc_AE(train_data, train_labels, sess, model, batch_size, learning_rate, data_ph, labels_ph,
-                             batch_size_ph, shufflebuffer_ph,epochs_ph, iterator, n_clusters, num_classes)
-    print("Accuracy on Task{} for current data:{}".format(task, acc_train_curr))
-    acc_curr.append(acc_train_curr)
-
+acc_curr = []
 # Save results
-utils.result_saver1(acc_pre,acc_curr, hp_dict, log_path_dt)
+utils.result_saver1(acc_pre, acc_curr, hp_dict, log_path_dt)
 
 
 

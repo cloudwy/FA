@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 from sklearn.manifold import TSNE
 
-os.environ["CUDA_VISIBLE_DEVICES"]="3"
+os.environ["CUDA_VISIBLE_DEVICES"]="2"
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 
@@ -164,7 +164,7 @@ for task in range(5):
             org_img[j * 28:(j + 1) * 28, k * 28:(k + 1) * 28] = np.reshape(org_imgs[j * N_plot + k, :], [28, 28])
     plt.imshow(org_img)
     dt = datetime.now().strftime("%Y_%m_%d_%H_%M")
-    fname = log_path_dt + "/" + "org_imgs_AE"+str(task)
+    fname = log_path_dt + "/" + "org_imgs_AE_GR"+str(task)
     plt.savefig(fname, format="png")
     print("End save original images{}".format(task))
     gen_img = np.zeros((28 * N_plot, 28 * N_plot), dtype=np.float32)
@@ -172,7 +172,7 @@ for task in range(5):
         for k in range(N_plot):
             gen_img[j * 28:(j + 1) * 28, k * 28:(k + 1) * 28] = np.reshape(gen_imgs[j * N_plot + k, :], [28, 28])
     plt.imshow(gen_img)
-    fname = log_path_dt + "/" + "gen_imgs_AE"+str(task)
+    fname = log_path_dt + "/" + "gen_imgs_AE_GR"+str(task)
     plt.savefig(fname, format="png")
     plt.close()
     print("End save generated images{}".format(task))

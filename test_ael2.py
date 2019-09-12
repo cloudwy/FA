@@ -32,7 +32,7 @@ dec_filters = []
 
 epochs = 100
 batch_size = 256
-learning_rate = 0.1
+learning_rate = 0.001
 num_classes = 10
 
 N_plot = 16
