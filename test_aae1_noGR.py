@@ -11,7 +11,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from datetime import datetime
 
-os.environ["CUDA_VISIBLE_DEVICES"]="6"
+os.environ["CUDA_VISIBLE_DEVICES"]="2"
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 
@@ -50,7 +50,7 @@ iterator = dataset.make_initializable_iterator()
 [batch_data, batch_labels] = iterator.get_next()
 
 # Create AAE
-model = models.AAE(batch_data, batch_labels, cont_latent_size, cat_latent_size, img_size, enc_neurons, enc_filters, dec_neurons, dec_im_shape, dec_filters, disc_neurons)
+model = models.AAE1(batch_data, batch_labels, cont_latent_size, cat_latent_size, img_size, enc_neurons, enc_filters, dec_neurons, dec_im_shape, dec_filters, disc_neurons)
 
 # Start tf session
 sess = tf.Session(config=config)
@@ -106,7 +106,13 @@ for task in range(5):
     model.update_gen_weights(sess)
     print("End Training model for task{}".format(task))
     # Generate and save generative images
-    utils.plot_gen_imgs(sess, model, N_plot, log_path_dt, task)
+    img = utils.plot_gen_imgs(sess, model, N_plot)
+    plt.imshow(img)
+    fname = log_path_dt + "/gen_imgs_AAE1_noGR" + str(task)
+    plt.savefig(fname, format="png")
+    plt.close()
+    print("End generate and save images for task %d" % task)
+
     # Compute accuracy
     #Load all previous data
     data = datasets.split_mnist(np.arange(2*(task+1)),[])
@@ -123,7 +129,7 @@ for task in range(5):
     acc_train_curr = utils.acc_AAE(train_data, train_labels, sess, model, batch_size, learning_rate, data_ph, labels_ph,
                               batch_size_ph, shufflebuffer_ph, epochs_ph, iterator, num_classes, cat_latent_size)
     print("Accuracy on Task{} for current data:{}".format(task, acc_train_curr))
-    acc_curr.append(acc_train_pre)
+    acc_curr.append(acc_train_curr)
 
 # Save results
 utils.result_saver1(acc_pre,acc_curr,hp_dict, log_path_dt)

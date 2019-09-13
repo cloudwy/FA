@@ -111,16 +111,11 @@ while True:
         break
 print("End Training model")
 
-# Generate and save some images
+# Generate and save generative images
 model.update_gen_weights(sess) #Copy weights from trainable to non trainable generator
-gen_imgs = sess.run(model.static_dec_out, feed_dict={model.repl_batch_size: N_plot*N_plot})
-img = np.zeros((28*N_plot, 28*N_plot), dtype=np.float32)
-for j in range(N_plot):
-    for k in range(N_plot):
-        img[j*28:(j+1)*28, k*28:(k+1)*28] = np.reshape(gen_imgs[j*N_plot+k, :], [28, 28])
+img = utils.plot_gen_imgs(sess,model,N_plot)
 plt.imshow(img)
-#dt = datetime.now().strftime("%Y_%m_%d_%H_%M")
-fname = log_path_dt+"/"+"gen_imgs_AAE"
+fname = log_path_dt+"/"+"gen_imgs_AAE1"
 plt.savefig(fname, format="png")
 plt.close()
 print("End generate and save images")

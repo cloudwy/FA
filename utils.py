@@ -51,18 +51,27 @@ def plot_gen_imgs(sess, model, gen_sample_batch_size, log_path_dt, i):
     plt.savefig(fname, format="png")
     plt.close()
 """
-def plot_gen_imgs(sess,model,N_plot,log_path_dt, i):
-    gen_imgs = sess.run(model.static_dec_out,
-                        feed_dict={model.repl_batch_size: N_plot*N_plot})
+'''
+def plot_gen_imgs1(sess,model,N_plot,log_path_dt,i):
+    gen_imgs = sess.run(model.static_dec_out,feed_dict={model.repl_batch_size: N_plot*N_plot})
     img = np.zeros((28 * N_plot, 28 * N_plot), dtype=np.float32)
     for j in range(N_plot):
         for k in range(N_plot):
             img[j * 28:(j + 1) * 28, k * 28:(k + 1) * 28] = np.reshape(gen_imgs[j * N_plot + k, :], [28, 28])
     plt.imshow(img)
-    fname = log_path_dt+"/gen_imgs_"+str(i)
+    fname = log_path_dt+"/gen_imgs_AAE"+str(i)
     plt.savefig(fname, format="png")
     plt.close()
     print("End generate and save images for task %d" %i)
+'''
+
+def plot_gen_imgs(sess,model,N_plot):
+    gen_imgs = sess.run(model.static_dec_out, feed_dict={model.repl_batch_size: N_plot * N_plot})
+    img = np.zeros((28 * N_plot, 28 * N_plot), dtype=np.float32)
+    for j in range(N_plot):
+        for k in range(N_plot):
+            img[j * 28:(j + 1) * 28, k * 28:(k + 1) * 28] = np.reshape(gen_imgs[j * N_plot + k, :], [28, 28])
+    return img
 
 
 def create_tensorboard(sess, log_path):
