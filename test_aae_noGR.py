@@ -28,7 +28,7 @@ dec_im_shape = [7, 7, 32]
 dec_filters = [32, 32, 1]
 ##discriminator network
 disc_neurons = [400, 300, 1]
-epochs = 100
+epochs = 5
 batch_size = 256
 learning_rate = 0.001
 
@@ -106,7 +106,13 @@ for task in range(5):
     model.update_gen_weights(sess)
     print("End Training model for task{}".format(task))
     # Generate and save generative images
-    utils.plot_gen_imgs(sess, model, N_plot, log_path_dt, task)
+    img = utils.plot_gen_imgs(sess, model, N_plot)
+    plt.imshow(img)
+    fname = log_path_dt + "/gen_imgs_AAE_noGR" + str(task)
+    plt.savefig(fname, format="png")
+    plt.close()
+    print("End generate and save images for task %d" % task)
+
     # Compute accuracy
     #Load all previous data
     data = datasets.split_mnist(np.arange(2*(task+1)),[])

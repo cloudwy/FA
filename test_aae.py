@@ -9,12 +9,10 @@ import utils
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
-from datetime import datetime
 
-os.environ["CUDA_VISIBLE_DEVICES"]="1"
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
-
 
 # Constants
 cat_latent_size = 16
@@ -32,7 +30,6 @@ disc_neurons = [400, 300, 1]
 epochs = 100
 batch_size = 256
 learning_rate = 0.001
-
 
 num_classes = 10
 N_plot = 16
@@ -77,14 +74,11 @@ hp_dict = {"cat_latent_size": cat_latent_size,
 "N_plot": N_plot,
 "log_path": log_path}
 
-#Create Tensorboard Filewriter & Save Results
+# Create Tensorboard Filewriter & Save Results
 [fw,log_path_dt]=utils.create_tensorboard(sess,log_path)
 
 # Load data for training
 data = datasets.mnist()
-#data = datasets.split_mnist([0], [1])
-#data = datasets.fashion_mnist()
-#data = datasets.split_fashion_mnist([0], [1])
 [train_data, train_labels] = data.get_train_samples()
 train_data = train_data / 255.0
 sess.run(iterator.initializer, feed_dict={data_ph: train_data, labels_ph: train_labels, batch_size_ph: batch_size, shufflebuffer_ph: train_data.shape[0], epochs_ph: epochs})
@@ -103,16 +97,11 @@ while True:
         break
 print("End Training model")
 
+model.update_gen_weights(sess) #Copy weights from trainable to non trainable generator
 
 # Generate and save some images
-model.update_gen_weights(sess) #Copy weights from trainable to non trainable generator
-gen_imgs = sess.run(model.static_dec_out, feed_dict={model.repl_batch_size: N_plot*N_plot})
-img = np.zeros((28*N_plot, 28*N_plot), dtype=np.float32)
-for j in range(N_plot):
-    for k in range(N_plot):
-        img[j*28:(j+1)*28, k*28:(k+1)*28] = np.reshape(gen_imgs[j*N_plot+k, :], [28, 28])
+img = utils.plot_gen_imgs(sess, model, N_plot)
 plt.imshow(img)
-#dt = datetime.now().strftime("%Y_%m_%d_%H_%M")
 fname = log_path_dt+"/"+"gen_imgs_AAE"
 plt.savefig(fname, format="png")
 plt.close()
