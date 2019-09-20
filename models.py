@@ -496,7 +496,8 @@ class AAE2(model):
 class AAE3(model):
     """
     Adversarial Autoencoder
-    based on AAE with two discriminators,change optimizer
+    based on the model in the paper
+    AAE with two discriminators,optimizer is GD with momentum
     """
 
     def __init__(self, x, y, cont_latent_size, cat_latent_size, img_size, enc_neurons, enc_filters, dec_neurons, dec_im_shape, dec_filters, disc_neurons):
