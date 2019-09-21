@@ -275,3 +275,77 @@ def acc_AE_GR(data,labels,sess,model,batch_size,learning_rate,data_ph,labels_ph,
     print("Total number of data：{} True classification: {}".format(data.shape[0],acc))
     acc /= np.float32(label.shape[0])
     return acc
+
+def AE_Vdata(data,labels,sess,model,batch_size,learning_rate,data_ph,labels_ph,batch_size_ph,shufflebuffer_ph,epochs_ph,
+           iterator,n_clusters,num_classes):
+    # Get all cluster addignments for training data
+    sess.run(iterator.initializer, feed_dict={data_ph: data, labels_ph: labels, batch_size_ph: batch_size,
+                                              shufflebuffer_ph: data.shape[0], epochs_ph: 1})
+    org_img = []
+    org_label = []
+    cont_z = []
+    while True:
+        try:
+            [img_tmp,label_tmp, z_cont_tmp] = sess.run([model.input, model.label, model.z_enc], feed_dict={model.batch_size: batch_size,
+                                                                                       model.learning_rate: learning_rate})
+            org_img.append(img_tmp)
+            org_label.append(label_tmp)
+            cont_z.append(z_cont_tmp)
+        except tf.errors.OutOfRangeError:
+            break
+    org_img = np.concatenate(org_img, axis=0)
+    org_label = np.concatenate(org_label, axis=0)
+    cont_z = np.concatenate(cont_z, axis=0)
+    # K-Means
+    cluster = KMeans(n_clusters,random_state=9).fit_predict(cont_z)
+    # Determine the label for each cluster
+    counts = np.zeros((n_clusters, num_classes), dtype=np.float32)
+    for i in range(org_label.shape[0]):
+        j = np.int32(cluster[i])
+        k = np.int32(org_label[i])
+        counts[j, k] += 1
+    cluster_label = np.argmax(counts, axis=1)
+    #Determine the cat_z
+    cat_z = []
+    for i in range(org_label.shape[0]):
+        idx = cluster[i]
+        cat_z.append(cluster_label[idx])
+    cat_z = np.array(cat_z)
+    return org_img,org_label,cont_z,cluster,cat_z
+
+def AE_GR_Vdata(data,labels,sess,model,batch_size,learning_rate,data_ph,labels_ph,batch_size_ph,shufflebuffer_ph,epochs_ph,
+           iterator,n_clusters,num_classes):
+    # Get all cluster assignments for training data
+    sess.run(iterator.initializer, feed_dict={data_ph: data, labels_ph: labels, batch_size_ph: batch_size,
+                                              shufflebuffer_ph: data.shape[0], epochs_ph: 1})
+    org_img = []
+    org_label = []
+    cont_z = []
+    while True:
+        try:
+            [org_img_tmp, org_label_tmp, cont_z_tmp] = sess.run([model.input, model.label, model.z_enc], feed_dict={model.batch_size: batch_size,
+                                                model.learning_rate: learning_rate,model.b_replay:False})
+            org_img.append(org_img_tmp)
+            org_label.append(org_label_tmp)
+            cont_z.append(cont_z_tmp)
+        except tf.errors.OutOfRangeError:
+            break
+    org_img = np.concatenate(org_img, axis=0)
+    org_label = np.concatenate(org_label, axis=0)
+    cont_z = np.concatenate(cont_z, axis=0)
+    # K-Means
+    cluster = KMeans(n_clusters, random_state=9).fit_predict(cont_z)
+    # Determine the label for each cluster
+    counts = np.zeros((n_clusters, num_classes), dtype=np.float32)
+    for i in range(org_label.shape[0]):
+        j = np.int32(cluster[i])
+        k = np.int32(org_label[i])
+        counts[j, k] += 1
+    cluster_label = np.argmax(counts, axis=1)
+    # Determine the cat_z
+    cat_z = []
+    for i in range(org_label.shape[0]):
+        idx = cluster[i]
+        cat_z.append(cluster_label[idx])
+    cat_z = np.array(cat_z)
+    return org_img, org_label, cont_z, cluster, cat_z
