@@ -195,7 +195,7 @@ for task in range(5):
     embedding.shape
     plt.scatter(embedding[:, 0], embedding[:, 1], c=org_label_umap, cmap='Spectral', s=0.1)
     plt.gca().set_aspect('equal', 'datalim')
-    plt.colorbar(boundaries=np.arange(2*(task+1)+1)-0.5).set_ticks(np.arange(2*(task+ 1)))
+    plt.colorbar(boundaries=np.arange(2*(task+1)+1)-0.5).set_ticks(np.arange(2*(task+1)))
     plt.title('Original Code on Task' + str(task), fontsize=12)
     fname = log_path_dt + "/" + "org_imgs_AE_GR_umap" + str(task)
     plt.savefig(fname, format="png")
@@ -223,7 +223,7 @@ for task in range(5):
     embedding.shape
     plt.scatter(embedding[:, 0], embedding[:, 1], c=cat_z_umap, cmap='Spectral', s=0.1)
     plt.gca().set_aspect('equal', 'datalim')
-    plt.colorbar(boundaries=np.arange(2*(task+1)+1)-0.5).set_ticks(np.arange(2*(task+1)))
+    plt.colorbar(boundaries=np.arange(2 * (task + 1) + 1) - 0.5).set_ticks(np.arange(2 * (task + 1)))
     plt.title('Latent Code to Class_Label' + str(task), fontsize=12)
     fname = log_path_dt + "/" + "gen_imgs_AE_GR_umap" + str(task)
     plt.savefig(fname, format="png")
