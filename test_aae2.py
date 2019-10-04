@@ -29,7 +29,7 @@ dec_im_shape = [7, 7, 32]
 dec_filters = [32, 32, 1]
 ##discriminator network
 disc_neurons = [400, 300, 1]
-epochs = 3
+epochs = 100
 batch_size = 256
 learning_rate = 0.001
 momentum_recon = 0.9

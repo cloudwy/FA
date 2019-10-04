@@ -33,6 +33,7 @@ class AAE(model):
         self.dec_filters = dec_filters
         self.disc_neurons = disc_neurons
         self.label = y
+        self.original = x #new
 
         # Define constants
         self.enc_activation = lambda x: tf.nn.leaky_relu(tf.layers.BatchNormalization(center=True, scale=True)(x, training=True), alpha=0.1)
@@ -751,6 +752,7 @@ class AE_l2_GR(model):
         self.dec_filters = dec_filters
         self.label = y
         self.replay_z = z
+
 
         # Define constants
         self.enc_activation = lambda x: tf.nn.leaky_relu(tf.layers.BatchNormalization(center=True, scale=True)(x, training=True), alpha=0.1)

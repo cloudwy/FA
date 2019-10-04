@@ -16,7 +16,7 @@ import umap
 import warnings
 warnings.filterwarnings('ignore')
 
-os.environ["CUDA_VISIBLE_DEVICES"]="3"
+os.environ["CUDA_VISIBLE_DEVICES"]="7"
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 
@@ -34,7 +34,7 @@ dec_neurons = [2000, 500, 500, 784]
 dec_im_shape = [784]
 dec_filters = []
 
-epochs = 100
+epochs = 500
 batch_size = 256
 learning_rate = 0.001
 num_classes = 10
@@ -87,7 +87,7 @@ hp_dict = {
 # Load data for training
 data = datasets.mnist()
 #data = datasets.split_mnist([1], [0])
-#data = datasets.fashion_mnist()
+
 
 [train_data, train_labels] = data.get_train_samples()
 train_data = train_data / 255.0
@@ -114,18 +114,20 @@ org_img = np.zeros((28*N_plot, 28*N_plot), dtype=np.float32)
 for j in range(N_plot):
     for k in range(N_plot):
         org_img[j*28:(j+1)*28, k*28:(k+1)*28] = np.reshape(org_imgs[j*N_plot+k, :], [28, 28])
+plt.title('Original Images', fontsize=12)
 plt.imshow(org_img)
 dt = datetime.now().strftime("%Y_%m_%d_%H_%M")
-fname = log_path_dt+"/"+"org_imgs_AE"
-plt.savefig(fname, format="png")
+fname = log_path_dt+"/"+"org_imgs_AE"+".png"
+plt.savefig(fname)
 print("End save original images")
 gen_img = np.zeros((28*N_plot, 28*N_plot), dtype=np.float32)
 for j in range(N_plot):
     for k in range(N_plot):
         gen_img[j*28:(j+1)*28, k*28:(k+1)*28] = np.reshape(gen_imgs[j*N_plot+k, :], [28, 28])
+plt.title('Generated Images', fontsize=12)
 plt.imshow(gen_img)
-fname = log_path_dt+"/"+"gen_imgs_AE"
-plt.savefig(fname, format="png")
+fname = log_path_dt+"/"+"gen_imgs_AE"+".png"
+plt.savefig(fname)
 plt.close()
 print("End save generated images")
 
@@ -158,8 +160,8 @@ plt.scatter(embedding[:, 0], embedding[:, 1], c=cluster_umap, cmap='Spectral', s
 plt.gca().set_aspect('equal', 'datalim')
 plt.colorbar(boundaries=np.arange(n_clusters+1)-0.5).set_ticks(np.arange(n_clusters))
 plt.title('Latent Code to Cluster_Label', fontsize=12)
-fname = log_path_dt+"/"+"latent_imgs_AE_umap"
-plt.savefig(fname, format="png")
+fname = log_path_dt+"/"+"latent_imgs_AE_umap"+".png"
+plt.savefig(fname)
 plt.close()
 print("End save generated images of umap1")
 ##umap for latent code(cluster->class)
@@ -172,8 +174,8 @@ plt.scatter(embedding[:, 0], embedding[:, 1], c=cat_z_umap, cmap='Spectral', s=0
 plt.gca().set_aspect('equal', 'datalim')
 plt.colorbar(boundaries=np.arange(num_classes+1)-0.5).set_ticks(np.arange(num_classes))
 plt.title('Latent Code to Class_Label', fontsize=12)
-fname = log_path_dt+"/"+"gen_imgs_AE_umap"
-plt.savefig(fname, format="png")
+fname = log_path_dt+"/"+"gen_imgs_AE_umap"+".png"
+plt.savefig(fname)
 plt.close()
 print("End save generated images of umap2")
 

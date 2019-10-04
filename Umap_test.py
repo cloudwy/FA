@@ -149,12 +149,13 @@ reducer.fit(org_img)
 embedding = reducer.transform(org_img)
 assert(np.all(embedding == reducer.embedding_))
 embedding.shape
-plt.scatter(embedding[:, 0], embedding[:, 1], c=org_label, cmap='Spectral', s=10)
-plt.gca().set_aspect('equal', 'datalim')
+plt.scatter(embedding[:, 0], embedding[:, 1], c=org_label, cmap='Spectral', s=0.1)
+#plt.gca().set_aspect('equal', 'datalim')
 plt.colorbar(boundaries=np.arange(11)-0.5).set_ticks(np.arange(10))
-plt.title('UMAP projection of the Digits dataset', fontsize=24)
-#plt.show()
+plt.title('UMAP projection of the Original Code', fontsize=15)
+plt.show()
 plt.savefig('org.PNG')
+plt.close()
 
 # image for latent data
 cat_z = np.argmax(cat_z, axis=1)
@@ -163,12 +164,13 @@ reducer.fit(cont_z)
 embedding = reducer.transform(cont_z)
 assert(np.all(embedding == reducer.embedding_))
 embedding.shape
-plt.scatter(embedding[:, 0], embedding[:, 1], c=cat_z, cmap='Spectral', s=16)
+plt.scatter(embedding[:, 0], embedding[:, 1], c=cat_z, cmap='Spectral', s=0.1)
 plt.gca().set_aspect('equal', 'datalim')
-plt.colorbar(boundaries=np.arange(11)-0.5).set_ticks(np.arange(10))
-plt.title('UMAP projection of the latent code of Digits dataset', fontsize=24)
-#plt.show()
-plt.savefig('cat_z.PNG')
+plt.colorbar(boundaries=np.arange(17)-0.5).set_ticks(np.arange(16))
+plt.title('UMAP projection of the latent code of Latent Code', fontsize=15)
+plt.show()
+plt.savefig('cat_z.png')
+
 
 
 

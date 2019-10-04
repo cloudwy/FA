@@ -349,3 +349,47 @@ def AE_GR_Vdata(data,labels,sess,model,batch_size,learning_rate,data_ph,labels_p
         cat_z.append(cluster_label[idx])
     cat_z = np.array(cat_z)
     return org_img, org_label, cont_z, cluster, cat_z
+
+def AAE_Vdata(train_data,train_labels,sess,model,batch_size,learning_rate,data_ph,labels_ph,batch_size_ph,shufflebuffer_ph,epochs_ph,
+           iterator,num_classes,cat_latent_size):
+    # Get all cluster assignments for training data
+    sess.run(iterator.initializer, feed_dict={data_ph: train_data, labels_ph: train_labels, batch_size_ph: batch_size,
+                                              shufflebuffer_ph: train_data.shape[0], epochs_ph: 1})
+    org_img = []
+    org_label =[]
+    cont_z = []
+    cat_z_matrix = []
+    while True:
+        try:
+            [img_tmp, label_tmp, z_cont_tmp, z_cat_tmp] = sess.run([model.original, model.label, model.z_enc_cont,model.z_enc_cat], feed_dict={model.batch_size: batch_size,
+                                                                                           model.learning_rate: learning_rate,
+                                                                                           model.b_replay: False,
+                                                                                           model.repl_batch_size: batch_size})
+            org_img.append(img_tmp)
+            org_label.append(label_tmp)
+            cont_z.append(z_cont_tmp)
+            cat_z_matrix.append(z_cat_tmp)
+        except tf.errors.OutOfRangeError:
+            break
+    org_img = np.concatenate(org_img,axis=0)
+    org_img = np.reshape(org_img, [-1, 784])
+    org_label = np.concatenate(org_label,axis=0)
+    cont_z = np.concatenate(cont_z,axis=0)
+    cat_z_matrix= np.concatenate(cat_z_matrix,axis=0)
+    #determine the label for each cluster
+    counts = np.zeros((cat_latent_size, num_classes), dtype=np.float32)
+    for i in range(org_label.shape[0]):
+        j = np.argmax(cat_z_matrix[i, :], axis=0)
+        k = np.int32(org_label[i])
+        counts[j, k] += 1
+    cluster_label = np.argmax(counts, axis=1)
+    #determine cluster
+    cluster = np.argmax(cat_z_matrix, axis=1)
+    #determine cat_z
+    cat_z = []
+    for i in range(org_label.shape[0]):
+        idx = cluster[i]
+        cat_z.append(cluster_label[idx])
+    cat_z = np.array(cat_z)
+    return org_img,org_label,cont_z, cluster,cat_z
+

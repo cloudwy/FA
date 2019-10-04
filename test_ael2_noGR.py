@@ -117,18 +117,20 @@ for task in range(5):
     for j in range(N_plot):
         for k in range(N_plot):
             org_img[j * 28:(j + 1) * 28, k * 28:(k + 1) * 28] = np.reshape(org_imgs[j * N_plot + k, :], [28, 28])
+    plt.title('Task ' + str(task + 1), fontsize=12)
     plt.imshow(org_img)
     dt = datetime.now().strftime("%Y_%m_%d_%H_%M")
-    fname = log_path_dt + "/" + "org_imgs_AE_noGR"+str(task)
-    plt.savefig(fname, format="png")
+    fname = log_path_dt + "/" + "org_imgs_AE_noGR"+str(task)+".png"
+    plt.savefig(fname)
     print("End save original images{}".format(task))
     gen_img = np.zeros((28 * N_plot, 28 * N_plot), dtype=np.float32)
     for j in range(N_plot):
         for k in range(N_plot):
             gen_img[j * 28:(j + 1) * 28, k * 28:(k + 1) * 28] = np.reshape(gen_imgs[j * N_plot + k, :], [28, 28])
+    plt.title('Task ' + str(task + 1), fontsize=12)
     plt.imshow(gen_img)
-    fname = log_path_dt + "/" + "gen_imgs_AE_noGR"+str(task)
-    plt.savefig(fname, format="png")
+    fname = log_path_dt + "/" + "gen_imgs_AE_noGR"+str(task)+".png"
+    plt.savefig(fname)
     plt.close()
     print("End save generated images{}".format(task))
 

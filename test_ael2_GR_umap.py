@@ -16,7 +16,7 @@ import umap
 import warnings
 warnings.filterwarnings('ignore')
 
-os.environ["CUDA_VISIBLE_DEVICES"]="2"
+os.environ["CUDA_VISIBLE_DEVICES"]="3"
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 
@@ -33,7 +33,7 @@ dec_neurons = [2000, 500, 500, 784]
 dec_im_shape = [784]
 dec_filters = []
 
-epochs = 100
+epochs = 500
 batch_size = 256
 learning_rate = 0.001
 num_classes = 10
@@ -100,7 +100,9 @@ for task in range(5):
     sess.run(tf.variables_initializer(model.opt_recon.variables()))
 
     #Load data for training
-    data = datasets.split_mnist([2 * task], [2 * task + 1])
+    #data = datasets.split_mnist([2 * task], [2 * task + 1])
+    data = datasets.split_fashion_mnist([2 * task], [2 * task + 1])
+
     [train_data, train_labels] = data.get_train_samples()
     train_data = train_data / 255.0
     if task > 0:
@@ -165,23 +167,27 @@ for task in range(5):
     for j in range(N_plot):
         for k in range(N_plot):
             org_img[j * 28:(j + 1) * 28, k * 28:(k + 1) * 28] = np.reshape(org_imgs[j * N_plot + k, :], [28, 28])
+    plt.title('Task ' + str(task + 1), fontsize=12)
     plt.imshow(org_img)
     dt = datetime.now().strftime("%Y_%m_%d_%H_%M")
-    fname = log_path_dt + "/" + "org_imgs_AE_GR"+str(task)
-    plt.savefig(fname, format="png")
+    fname = log_path_dt + "/" + "org_imgs_AE_GR"+str(task)+".png"
+    plt.savefig(fname)
     print("End save original images{}".format(task))
     gen_img = np.zeros((28 * N_plot, 28 * N_plot), dtype=np.float32)
     for j in range(N_plot):
         for k in range(N_plot):
             gen_img[j * 28:(j + 1) * 28, k * 28:(k + 1) * 28] = np.reshape(gen_imgs[j * N_plot + k, :], [28, 28])
+    plt.title('Task ' + str(task + 1), fontsize=12)
     plt.imshow(gen_img)
-    fname = log_path_dt + "/" + "gen_imgs_AE_GR"+str(task)
-    plt.savefig(fname, format="png")
+    fname = log_path_dt + "/" + "gen_imgs_AE_GR"+str(task)+".png"
+    plt.savefig(fname)
     plt.close()
     print("End save generated images{}".format(task))
 
     #UMAP
-    data = datasets.split_mnist(np.arange(2*(task+1)),[])
+    #data = datasets.split_mnist(np.arange(2*(task+1)),[])
+    data = datasets.split_fashion_mnist(np.arange(2 * (task + 1)), [])
+
     [train_data, train_labels] = data.get_train_samples()
     train_data = train_data / 255.0
     [org_img_umap, org_label_umap, cont_z_umap, cluster_umap, cat_z_umap] = utils.AE_GR_Vdata(train_data, train_labels,
@@ -196,9 +202,9 @@ for task in range(5):
     plt.scatter(embedding[:, 0], embedding[:, 1], c=org_label_umap, cmap='Spectral', s=0.1)
     plt.gca().set_aspect('equal', 'datalim')
     plt.colorbar(boundaries=np.arange(2*(task+1)+1)-0.5).set_ticks(np.arange(2*(task+1)))
-    plt.title('Original Code on Task' + str(task), fontsize=12)
-    fname = log_path_dt + "/" + "org_imgs_AE_GR_umap" + str(task)
-    plt.savefig(fname, format="png")
+    plt.title('Task ' + str(task+1), fontsize=12)
+    fname = log_path_dt + "/" + "org_imgs_AE_GR_umap" + str(task)+".png"
+    plt.savefig(fname)
     plt.close()
     print("End save original images of umap{}".format(task))
     ##umap for latent code(cluster)
@@ -210,9 +216,9 @@ for task in range(5):
     plt.scatter(embedding[:, 0], embedding[:, 1], c=cluster_umap, cmap='Spectral', s=0.1)
     plt.gca().set_aspect('equal', 'datalim')
     plt.colorbar(boundaries=np.arange(n_clusters+1)-0.5).set_ticks(np.arange(n_clusters))
-    plt.title('Latent Code to Cluster_Label' + str(task), fontsize=12)
-    fname = log_path_dt + "/" + "latent_imgs_AE_GR_umap" + str(task)
-    plt.savefig(fname, format="png")
+    plt.title('Task ' + str(task+1), fontsize=12)
+    fname = log_path_dt + "/" + "latent_imgs_AE_GR_umap" + str(task)+".png"
+    plt.savefig(fname)
     plt.close()
     print("End save generated images of umap{}".format(task))
     ##umap for latent code(cluster->class)
@@ -224,21 +230,25 @@ for task in range(5):
     plt.scatter(embedding[:, 0], embedding[:, 1], c=cat_z_umap, cmap='Spectral', s=0.1)
     plt.gca().set_aspect('equal', 'datalim')
     plt.colorbar(boundaries=np.arange(2 * (task + 1) + 1) - 0.5).set_ticks(np.arange(2 * (task + 1)))
-    plt.title('Latent Code to Class_Label' + str(task), fontsize=12)
-    fname = log_path_dt + "/" + "gen_imgs_AE_GR_umap" + str(task)
-    plt.savefig(fname, format="png")
+    plt.title('Task ' + str(task+1), fontsize=12)
+    fname = log_path_dt + "/" + "gen_imgs_AE_GR_umap" + str(task)+".png"
+    plt.savefig(fname)
     plt.close()
     print("End save generated images of umap{}".format(task))
 
     #Compute accuracy
-    data = datasets.split_mnist(np.arange(2*(task+1)),[])
+    #data = datasets.split_mnist(np.arange(2*(task+1)),[])
+    data = datasets.split_fashion_mnist(np.arange(2 * (task + 1)), [])
+
     [train_data, train_labels] = data.get_train_samples()
     train_data = train_data / 255.0
     acc_train_pre = utils.acc_AE_GR(train_data, train_labels, sess, model, batch_size, learning_rate, data_ph, labels_ph,
                              batch_size_ph, shufflebuffer_ph,epochs_ph, iterator, n_clusters, num_classes)
     print("Accuracy on Task{} for all previous data:{}".format(task,acc_train_pre))
     acc_pre.append(acc_train_pre)
-    data = datasets.split_mnist([2*task],[2*task+1])
+    #data = datasets.split_mnist([2*task],[2*task+1])
+    data = datasets.split_fashion_mnist([2 * task], [2 * task + 1])
+
     [train_data,train_labels] = data.get_train_samples()
     acc_train_curr = utils.acc_AE_GR(train_data, train_labels, sess, model, batch_size, learning_rate, data_ph, labels_ph,
                              batch_size_ph, shufflebuffer_ph,epochs_ph, iterator, n_clusters, num_classes)
