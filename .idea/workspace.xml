@@ -2,70 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6aaedaf-7ee2-4ab9-9212-fd640f0824f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/visualization_AAE_FMNIST.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/visualization_AAE_MNIST.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/1990_Cennectionist_Models_of_recognition_Memory.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/1996_Consolidation_in_Neural_Networks_and_the_Sleeping_Brain.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/1999_04_Catastrophic_forgetting_in_connectionist_networks.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2004_07_Reassessment_of_Catastrophic_Interference.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2005_02_Memory_retention_the_synaptic_stability_vs_plasticity_dilemma.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2013_Compete_to_compute.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2014_11_Error-Driven_Incremental_Learning_in_Deep_CNNs_for_Large-Scale_Image_Classification.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2015_03_An_Empirical_Investigation_of_Catastrophic_Forgetting.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2016_05_One-shot_Learning_with_Memory-Augmented_Neural_Networks.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2016_09_Progressive_Neural_Networks.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2017_01_PathNet_Evolution_Channels_Gradient_Descent_in_Super_Neural_Networks.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2017_03_Overcomeing_catastrophic_forgetting_in_neural_networks.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2017_05_Budget_Restricted_Incremental_Learning_with_Pre-Trained_CNNs_and_Binary_Associative_Memories.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2017_07_Avoiding_Catastrophic_Forgetting.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2017_08_Incremental_Learning_of_Object_Detectors_without_Catastrophic_Forgetting.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2017_08_Lifelong_Learning_with_Dynamically_Expandable_Networks.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2017_09_Lifelong_learning_of_human_actions_with_DNN_self-organization.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2017_11_Continual_Learning_in_Generative_Adversarial_Nets.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2017_11_Learning_without_Forgetting.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2017_11_Modular_Continual_Learning_in_a_Unified_Visual_Environment.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2017_11_Variational_Continual_Learning.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2017_12_Incremental_Learning_in_Deep_CNNs_Using_Partial_Network_Sharing.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2017_12_On_Quadratic_Penalties_in_Elastic_weight_Consolidation.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2017_Continual_Learning_Through_Synaptic_Intelligence.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2017_Continual_Learning_with_Generative_Replay.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2017_Gradient_Episodic_Memory_for_Continual_Learning.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2017_Overcoming_Catastrophic_Forgetting_by_Incremental_Moment_Matching.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2018_02_Memory-Based_Parameter_Adaptation.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2018_02_Progressive_Prune_Network_for_Memory_Efficient_Continual_Learning.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2018_02_Progressive_Reinforcement_Learning_with_Distillation_for_Multi-Skilled_Motion_Control.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2018_03_Bayesian_Incremental_Learning_for_DNNs.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2018_05_Online_Structured_Laplace_Approximations_for_Overcoming_Catastrophic_Forgetting.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2018_05_PackNet_Adding_Mutliple_Tasks_to_a_Single_Neural_Network_by_Iterative_Pruning.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2018_05_Rotate_your_Networks_Better_Weight_Consolidation_and_Less_Catastrophic_Forgetting.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2018_05_Towards_Robust_Evaluations_of_Continual_Learning.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2018_07_Continual_Lifelong_Learning_with_Neural_Networks_A_Review.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2018_09_Generative_replay_with_feedback_connections.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2018_12_Re-evaluating_CL_Scenarios_A_Categorization_and_Case_for_Strong_Baselines.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2018_Conditional_Computation_for_Continual_Learning.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2018_Continual_Learning_by_Conceptor_Regularization.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2018_Continual_Learning_with_Self_Organizing_Maps.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2018_Generative_Models_from_the_perspective_of_Continual_Learning.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2018_New_Metrics_for_Continual_Learning.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2019_02_Continual_Lifelong_Learning_with_Neural_Networks_A_Review.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/2019_Adaptive_Posterior_Learning__Few-Shot_Learning_with_a_Suprise-Based_Memory_Module.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/Continual_learning/Summary.ods" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【10】SI_Continual Learning Through Synaptic Intelligence.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/PDF/【10】SI_Continual Learning Through Synaptic Intelligence.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【11】MAS_Memory Aware Synapses_Learning what not to forget.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/PDF/【11】MAS_Memory Aware Synapses_Learning what not to forget.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【13】LwF_Learning Without Forgetting.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/PDF/【13】LwF_Learning Without Forgetting.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【1】2018_07_Continual_Lifelong_Learning_with_Neural_Networks_A_Review.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/PDF/【1】2018_07_Continual_Lifelong_Learning_with_Neural_Networks_A_Review.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【23】GAN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/PDF/【23】GAN.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【2】2017_Continual_Learning_with_Generative_Replay.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/PDF/【2】2017_Continual_Learning_with_Generative_Replay.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【4】Adversarial Autoencoders.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/PDF/【4】Adversarial Autoencoders.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【8】EWC_Overcoming catastrophic forgetting in neural networks.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/PDF/【8】EWC_Overcoming catastrophic forgetting in neural networks.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Thesis/EPS/AE_model.eps" beforeDir="false" afterPath="$PROJECT_DIR$/Thesis/EPS/AE_model.eps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Thesis/EPS/basic_l2AE.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_data_set_size_20190719.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_data_set_size_20190719.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results_20190813.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results_20190912.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualization_acc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,73 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_aae.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#362#608#0" />
-                <element signature="e#735#871#0" />
-                <element signature="e#1004#1903#0" />
-                <element signature="e#1905#2504#1" />
-                <element signature="e#2505#3072#1" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_ael2_GR.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1926">
-              <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-450">
-              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-              <folding>
-                <element signature="e#124#255#0" />
-                <element signature="e#279#9951#0" />
-                <element signature="e#9976#19092#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visualization_AAE_FMNIST.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/visualization_AAE_MNIST.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -162,6 +33,7 @@
         <option value="$PROJECT_DIR$/visualization_AE_FMNIST.py" />
         <option value="$PROJECT_DIR$/visualization_AAE_MNIST.py" />
         <option value="$PROJECT_DIR$/visualization_AAE_FMNIST.py" />
+        <option value="$USER_HOME$/Desktop/NLP/Lesson/Lecture-01-Syntax-Tree-and-Language-Model.ipynb课程在线准备代码.ipynb" />
       </list>
     </option>
   </component>
@@ -176,22 +48,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="FA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FA" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="H:/Final_Code" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/NLP/Lesson" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -211,7 +73,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.visualization_AAE_FMNIST">
+  <component name="RunManager" selected="Jupyter Notebook.FA">
+    <configuration name="FA" type="JupiterNotebook" factoryName="Jupyter Notebook">
+      <module name="FA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="additionalOptions" value="" />
+      <option name="ipnbHost" value="127.0.0.1" />
+      <option name="ipnbPort" value="8888" />
+      <method v="2" />
+    </configuration>
     <configuration name="test_aae" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -343,7 +222,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24983476" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -356,7 +235,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -408,10 +287,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_aae.py">
+    <entry file="file://$PROJECT_DIR$/visualization_AAE_MNIST.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        <state relative-caret-position="540">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding>
+            <element signature="e#124#255#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visualization_AAE_FMNIST.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_ael2_GR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -428,36 +331,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_ael2_GR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1926">
-          <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualization_AAE_MNIST.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualization_AAE_FMNIST.py">
+    <entry file="file://$PROJECT_DIR$/test_aae.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
-          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-450">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding>
-            <element signature="e#124#255#0" />
-            <element signature="e#279#9951#0" />
-            <element signature="e#9976#19092#0" />
-          </folding>
+    <entry file="file://$USER_HOME$/Desktop/NLP/Lesson/Lecture-01-Syntax-Tree-and-Language-Model.ipynb课程在线准备代码.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
         </state>
       </provider>
     </entry>
