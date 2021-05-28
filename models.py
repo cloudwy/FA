@@ -57,9 +57,9 @@ class AAE(model):
 
         # Build structure
         [self.z_enc_cont, self.z_enc_cat] = self.build_enc(self.input)
-        self.z_cont = self.cont_prior.sample(tf.shape(self.input)[0]) #[?,15]
-        self.z_cat = tf.one_hot(self.cat_prior.sample(tf.shape(self.input)[0]), self.cat_latent_size) #[?,16]
-        self.dec_out = self.build_dec(tf.concat([self.z_enc_cont, self.z_enc_cat], axis=1)) #tf.concat: ?*31, dec_out:?*784
+        self.z_cont = self.cont_prior.sample(tf.shape(self.input)[0])
+        self.z_cat = tf.one_hot(self.cat_prior.sample(tf.shape(self.input)[0]), self.cat_latent_size)
+        self.dec_out = self.build_dec(tf.concat([self.z_enc_cont, self.z_enc_cat], axis=1))
         [disc_cont_real_out, disc_cont_real_feature] = self.build_disc_cont(self.z_enc_cont)
         [disc_cont_fake_out, disc_cont_fake_feature] = self.build_disc_cont(self.z_cont)
         [disc_cat_real_out, disc_cat_real_feature] = self.build_disc_cat(self.z_enc_cat)
