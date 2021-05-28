@@ -1,50 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6aaedaf-7ee2-4ab9-9212-fd640f0824f9" name="Default Changelist" comment="Change folder name of referenced paper">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/FA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【10】SI_Continual Learning Through Synaptic Intelligence.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【10】SI_Continual Learning Through Synaptic Intelligence.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【11】MAS_Memory Aware Synapses_Learning what not to forget.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【11】MAS_Memory Aware Synapses_Learning what not to forget.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【12】Encoder Based Lifelong Learning.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【12】Encoder Based Lifelong Learning.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【13】LwF_Learning Without Forgetting.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【13】LwF_Learning Without Forgetting.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【14】Unsupervised Deep Embedding for Clustering Analysis.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【14】Unsupervised Deep Embedding for Clustering Analysis.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【15】Autoencoders.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【15】Autoencoders.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【16】Learning Internal Representations by Error Propagation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【16】Learning Internal Representations by Error Propagation.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【17】Unsupervised Continual Learning.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【17】Unsupervised Continual Learning.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【18】UMAP.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【18】UMAP.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【19】Unsupervised Deep Embedding for Clustering Analysis.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【19】Unsupervised Deep Embedding for Clustering Analysis.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【1】2018_07_Continual_Lifelong_Learning_with_Neural_Networks_A_Review.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【1】2018_07_Continual_Lifelong_Learning_with_Neural_Networks_A_Review.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【20】k-means.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【20】k-means.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【21】ConstrainedKmeans.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【21】ConstrainedKmeans.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【22】Data Clustering.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【22】Data Clustering.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【23】GAN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【23】GAN.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【24】Generative Adversarial Network in Medical Imaging_A Review.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【24】Generative Adversarial Network in Medical Imaging_A Review.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【25】EPANN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【25】EPANN.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【26】An Empirical Investigation of Catastrophic Forgetting in Gradient-Based Neural Networks.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【26】An Empirical Investigation of Catastrophic Forgetting in Gradient-Based Neural Networks.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【27】Generative Models from the perspective of CL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【27】Generative Models from the perspective of CL.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【28】2015_DeepLearning_LeCun.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【28】2015_DeepLearning_LeCun.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【29】Lifelong Robot Learning.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【29】Lifelong Robot Learning.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【2】2017_Continual_Learning_with_Generative_Replay.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【2】2017_Continual_Learning_with_Generative_Replay.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【30】Neuroscience-Inspired Artificial Intelligence.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【30】Neuroscience-Inspired Artificial Intelligence.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【31】Computational Principles of Learning in the Neocortex and Hippocampus.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【31】Computational Principles of Learning in the Neocortex and Hippocampus.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【32】Phantom Sampling.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【32】Phantom Sampling.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【33】RtF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【33】RtF.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【34】progressive network.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【34】progressive network.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【35】PathNet.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【35】PathNet.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【36】VAE.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【36】VAE.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【37】Tutorial on VAE.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【37】Tutorial on VAE.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【38】Variational Inference_review.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【38】Variational Inference_review.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【3】2018_12_Re-evaluationg_CL_Scenarios_A_Categorization_and_Case_for_Strong_Baselines.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【3】2018_12_Re-evaluationg_CL_Scenarios_A_Categorization_and_Case_for_Strong_Baselines.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【4】Adversarial Autoencoders.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【4】Adversarial Autoencoders.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【5】CatGAN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【5】CatGAN.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【6】Clustering and Unsupervised Anomaly Detection.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【6】Clustering and Unsupervised Anomaly Detection.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【7】Deep Clustering with Convolutional.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【7】Deep Clustering with Convolutional.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【8】EWC_Overcoming catastrophic forgetting in neural networks.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【8】EWC_Overcoming catastrophic forgetting in neural networks.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDF/【9】GEM_Gradient Episodic Memory for Continual Learning.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【9】GEM_Gradient Episodic Memory for Continual Learning.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_mnist_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_mnist_example.py" afterDir="false" />
+    <list default="true" id="b6aaedaf-7ee2-4ab9-9212-fd640f0824f9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Umap_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/learn_code/Umap_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_data_set_size_20190719.py" beforeDir="false" afterPath="$PROJECT_DIR$/learn_code/get_data_set_size.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_mnist_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/learn_code/plot_mnist_example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +43,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ref_code" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\GitManage\FA" />
     </key>
@@ -234,8 +199,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570962507291</updated>
-      <workItem from="1622192911349" duration="1153000" />
+      <workItem from="1622192911349" duration="2103000" />
     </task>
+    <task id="LOCAL-00001" summary="Change folder name of referenced paper">
+      <created>1622194239881</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1622194239881</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,10 +219,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Change folder name of referenced paper" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="113" y="25" width="1252" height="834" key="CommitChangelistDialog2" timestamp="1622194074777">
+    <state x="113" y="25" width="1252" height="834" key="CommitChangelistDialog2" timestamp="1622194238956">
       <screen x="0" y="25" width="1440" height="834" />
     </state>
-    <state x="113" y="25" width="1252" height="834" key="CommitChangelistDialog2/0.25.1440.834/1440.25.1920.1055@0.25.1440.834" timestamp="1622194074777" />
+    <state x="113" y="25" width="1252" height="834" key="CommitChangelistDialog2/0.25.1440.834/1440.25.1920.1055@0.25.1440.834" timestamp="1622194238956" />
     <state x="139" y="140" width="1200" height="596" key="DiffContextDialog" timestamp="1622193383833">
       <screen x="0" y="25" width="1440" height="834" />
     </state>
@@ -258,10 +231,10 @@
       <screen x="0" y="25" width="1440" height="834" />
     </state>
     <state x="248" y="74" key="SettingsEditor/0.25.1440.834/1440.25.1920.1055@0.25.1440.834" timestamp="1622194091153" />
-    <state x="339" y="175" key="Vcs.Push.Dialog.v2" timestamp="1622193337043">
+    <state x="339" y="175" key="Vcs.Push.Dialog.v2" timestamp="1622194320339">
       <screen x="0" y="25" width="1440" height="834" />
     </state>
-    <state x="339" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.834/1440.25.1920.1055@0.25.1440.834" timestamp="1622193337043" />
+    <state x="339" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.834/1440.25.1920.1055@0.25.1440.834" timestamp="1622194320339" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

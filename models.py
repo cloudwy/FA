@@ -1002,7 +1002,7 @@ class AE_l2_GR(model):
 
 class CAE_l2(model):
     """
-    Autoencoder with convolutional netzwerk
+    Autoencoder with convolutional neural network
     """
 
     def __init__(self, x, y, cont_latent_size, img_size, enc_neurons, enc_filters, dec_neurons, dec_im_shape, dec_filters):
@@ -1077,5 +1077,5 @@ class CAE_l2(model):
                     output = tf.layers.Dense(n, self.enc_activation)(output)
                 cont_output = tf.layers.Dense(self.cont_latent_size)(output)
                 #l2 normalization
-                cont_output = tf.math.l2_normalize(cont_output,axis=1,epsilon=1e-12,name=None,dim=None)
+                cont_output = tf.math.l2_normalize(cont_output, axis=1, epsilon=1e-12, name=None, dim=None)
         return cont_output

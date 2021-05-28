@@ -73,7 +73,6 @@ def plot_gen_imgs(sess,model,N_plot):
             img[j * 28:(j + 1) * 28, k * 28:(k + 1) * 28] = np.reshape(gen_imgs[j * N_plot + k, :], [28, 28])
     return img
 
-
 def create_tensorboard(sess, log_path):
     # Create log path if it does not exist
     dt = datetime.now().strftime("%Y_%m_%d_%H_%M")
