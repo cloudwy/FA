@@ -1,17 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6aaedaf-7ee2-4ab9-9212-fd640f0824f9" name="Default Changelist" comment="">
+    <list default="true" id="b6aaedaf-7ee2-4ab9-9212-fd640f0824f9" name="Default Changelist" comment="Change folder name of referenced paper">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【10】SI_Continual Learning Through Synaptic Intelligence.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【10】SI_Continual Learning Through Synaptic Intelligence.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【11】MAS_Memory Aware Synapses_Learning what not to forget.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【11】MAS_Memory Aware Synapses_Learning what not to forget.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【12】Encoder Based Lifelong Learning.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【12】Encoder Based Lifelong Learning.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【13】LwF_Learning Without Forgetting.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【13】LwF_Learning Without Forgetting.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【14】Unsupervised Deep Embedding for Clustering Analysis.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【14】Unsupervised Deep Embedding for Clustering Analysis.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【15】Autoencoders.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【15】Autoencoders.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【16】Learning Internal Representations by Error Propagation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【16】Learning Internal Representations by Error Propagation.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【17】Unsupervised Continual Learning.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【17】Unsupervised Continual Learning.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【18】UMAP.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【18】UMAP.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【19】Unsupervised Deep Embedding for Clustering Analysis.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【19】Unsupervised Deep Embedding for Clustering Analysis.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【1】2018_07_Continual_Lifelong_Learning_with_Neural_Networks_A_Review.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【1】2018_07_Continual_Lifelong_Learning_with_Neural_Networks_A_Review.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【20】k-means.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【20】k-means.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【21】ConstrainedKmeans.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【21】ConstrainedKmeans.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【22】Data Clustering.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【22】Data Clustering.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【23】GAN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【23】GAN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【24】Generative Adversarial Network in Medical Imaging_A Review.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【24】Generative Adversarial Network in Medical Imaging_A Review.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【25】EPANN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【25】EPANN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【26】An Empirical Investigation of Catastrophic Forgetting in Gradient-Based Neural Networks.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【26】An Empirical Investigation of Catastrophic Forgetting in Gradient-Based Neural Networks.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【27】Generative Models from the perspective of CL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【27】Generative Models from the perspective of CL.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【28】2015_DeepLearning_LeCun.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【28】2015_DeepLearning_LeCun.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【29】Lifelong Robot Learning.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【29】Lifelong Robot Learning.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【2】2017_Continual_Learning_with_Generative_Replay.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【2】2017_Continual_Learning_with_Generative_Replay.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【30】Neuroscience-Inspired Artificial Intelligence.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【30】Neuroscience-Inspired Artificial Intelligence.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【31】Computational Principles of Learning in the Neocortex and Hippocampus.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【31】Computational Principles of Learning in the Neocortex and Hippocampus.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【32】Phantom Sampling.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【32】Phantom Sampling.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【33】RtF.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【33】RtF.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【34】progressive network.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【34】progressive network.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【35】PathNet.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【35】PathNet.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【36】VAE.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【36】VAE.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【37】Tutorial on VAE.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【37】Tutorial on VAE.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【38】Variational Inference_review.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【38】Variational Inference_review.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【3】2018_12_Re-evaluationg_CL_Scenarios_A_Categorization_and_Case_for_Strong_Baselines.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【3】2018_12_Re-evaluationg_CL_Scenarios_A_Categorization_and_Case_for_Strong_Baselines.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【4】Adversarial Autoencoders.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【4】Adversarial Autoencoders.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【5】CatGAN.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【5】CatGAN.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【6】Clustering and Unsupervised Anomaly Detection.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【6】Clustering and Unsupervised Anomaly Detection.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【7】Deep Clustering with Convolutional.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【7】Deep Clustering with Convolutional.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【8】EWC_Overcoming catastrophic forgetting in neural networks.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【8】EWC_Overcoming catastrophic forgetting in neural networks.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF/【9】GEM_Gradient Episodic Memory for Continual Learning.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Ref_paper/【9】GEM_Gradient Episodic Memory for Continual Learning.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_mnist_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_mnist_example.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -22,58 +60,32 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/test_aae.py" />
-        <option value="$PROJECT_DIR$/visualization_acc.py" />
-        <option value="$PROJECT_DIR$/generate_images" />
-        <option value="$PROJECT_DIR$/models.py" />
-        <option value="$PROJECT_DIR$/visualization_AE_MNIST.py" />
-        <option value="$PROJECT_DIR$/visualization_AE_FMNIST.py" />
-        <option value="$PROJECT_DIR$/visualization_AAE_MNIST.py" />
-        <option value="$PROJECT_DIR$/visualization_AAE_FMNIST.py" />
-        <option value="$USER_HOME$/Desktop/NLP/Lesson/Lecture-01-Syntax-Tree-and-Language-Model.ipynb课程在线准备代码.ipynb" />
-      </list>
-    </option>
-  </component>
+  <component name="JupyterTrust" id="aea0496b-85e6-498a-99cb-602985a8565e" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1940" />
     <option name="height" value="1050" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
-    </panes>
+  <component name="ProjectId" id="1t9t0TiyEZMl3Lt6Q5skOQCf0co" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/NLP/Lesson" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\GitManage\FA" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Jupyter Notebook.FA">
+  <component name="RunManager" selected="Python.test_aae">
     <configuration name="FA" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="FA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,6 +115,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_aae.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -124,6 +137,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualization_AAE_FMNIST.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
@@ -145,6 +159,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualization_AAE_MNIST.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -166,6 +181,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualization_AE_FMNIST.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -187,6 +203,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualization_AE_MNIST.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -206,6 +223,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -216,30 +234,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570962507291</updated>
+      <workItem from="1622192911349" duration="1153000" />
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24983476" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30311614" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.41501418" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3286119" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Change folder name of referenced paper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change folder name of referenced paper" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="113" y="25" width="1252" height="834" key="CommitChangelistDialog2" timestamp="1622194074777">
+      <screen x="0" y="25" width="1440" height="834" />
+    </state>
+    <state x="113" y="25" width="1252" height="834" key="CommitChangelistDialog2/0.25.1440.834/1440.25.1920.1055@0.25.1440.834" timestamp="1622194074777" />
+    <state x="139" y="140" width="1200" height="596" key="DiffContextDialog" timestamp="1622193383833">
+      <screen x="0" y="25" width="1440" height="834" />
+    </state>
+    <state x="139" y="140" width="1200" height="596" key="DiffContextDialog/0.25.1440.834/1440.25.1920.1055@0.25.1440.834" timestamp="1622193383833" />
+    <state x="248" y="74" key="SettingsEditor" timestamp="1622194091154">
+      <screen x="0" y="25" width="1440" height="834" />
+    </state>
+    <state x="248" y="74" key="SettingsEditor/0.25.1440.834/1440.25.1920.1055@0.25.1440.834" timestamp="1622194091153" />
+    <state x="339" y="175" key="Vcs.Push.Dialog.v2" timestamp="1622193337043">
+      <screen x="0" y="25" width="1440" height="834" />
+    </state>
+    <state x="339" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.834/1440.25.1920.1055@0.25.1440.834" timestamp="1622193337043" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -251,99 +273,5 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/visualization_acc.py" />
-    <entry file="file://$PROJECT_DIR$/generate_images" />
-    <entry file="file://$PROJECT_DIR$/test_ael2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_aae_umap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2862" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualization_AE_FMNIST.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="34" column="10" lean-forward="true" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualization_AE_MNIST.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualization_AAE_MNIST.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding>
-            <element signature="e#124#255#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visualization_AAE_FMNIST.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_ael2_GR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="108" column="24" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#362#608#0" />
-            <element signature="e#735#871#0" />
-            <element signature="e#1004#1903#0" />
-            <element signature="e#1905#2504#1" />
-            <element signature="e#2505#3072#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_aae.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/NLP/Lesson/Lecture-01-Syntax-Tree-and-Language-Model.ipynb课程在线准备代码.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="1" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
