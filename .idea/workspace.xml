@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6aaedaf-7ee2-4ab9-9212-fd640f0824f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Umap_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/learn_code/Umap_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_data_set_size_20190719.py" beforeDir="false" afterPath="$PROJECT_DIR$/learn_code/get_data_set_size.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot_mnist_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/learn_code/plot_mnist_example.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_aae1.py" beforeDir="false" afterPath="$PROJECT_DIR$/explore_code/test_aae1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_aae1_GR.py" beforeDir="false" afterPath="$PROJECT_DIR$/explore_code/test_aae1_GR.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_aae1_noGR.py" beforeDir="false" afterPath="$PROJECT_DIR$/explore_code/test_aae1_noGR.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_aae1_upp.py" beforeDir="false" afterPath="$PROJECT_DIR$/explore_code/test_aae1_upp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_aae2.py" beforeDir="false" afterPath="$PROJECT_DIR$/explore_code/test_aae2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_aae3.py" beforeDir="false" afterPath="$PROJECT_DIR$/explore_code/test_aae3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cael2.py" beforeDir="false" afterPath="$PROJECT_DIR$/explore_code/test_cael2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualization_AAE_FMNIST.py" beforeDir="false" afterPath="$PROJECT_DIR$/visulizaiton_data/visualization_AAE_FMNIST.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualization_AAE_MNIST.py" beforeDir="false" afterPath="$PROJECT_DIR$/visulizaiton_data/visualization_AAE_MNIST.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualization_AE_FMNIST.py" beforeDir="false" afterPath="$PROJECT_DIR$/visulizaiton_data/visualization_AE_FMNIST.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualization_AE_MNIST.py" beforeDir="false" afterPath="$PROJECT_DIR$/visulizaiton_data/visualization_AE_MNIST.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +51,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/visulizaiton_data" />
+      <recent name="$PROJECT_DIR$/explore_code" />
       <recent name="$PROJECT_DIR$/ref_code" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -103,7 +112,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualization_AAE_FMNIST.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visulizaiton_data/visualization_AAE_FMNIST.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -125,7 +134,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualization_AAE_MNIST.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visulizaiton_data/visualization_AAE_MNIST.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -147,7 +156,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualization_AE_FMNIST.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visulizaiton_data/visualization_AE_FMNIST.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -169,7 +178,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualization_AE_MNIST.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visulizaiton_data/visualization_AE_MNIST.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_aae" />
         <item itemvalue="Python.visualization_AAE_FMNIST" />
         <item itemvalue="Python.visualization_AAE_MNIST" />
         <item itemvalue="Python.visualization_AE_FMNIST" />
         <item itemvalue="Python.visualization_AE_MNIST" />
-        <item itemvalue="Python.visualization_AAE_FMNIST" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +208,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570962507291</updated>
-      <workItem from="1622192911349" duration="2103000" />
+      <workItem from="1622192911349" duration="3388000" />
     </task>
     <task id="LOCAL-00001" summary="Change folder name of referenced paper">
       <created>1622194239881</created>
@@ -208,7 +217,21 @@
       <option name="project" value="LOCAL" />
       <updated>1622194239881</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="sort">
+      <created>1622195146121</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1622195146121</updated>
+    </task>
+    <task id="LOCAL-00003" summary="sort">
+      <created>1622195999252</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1622195999252</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,13 +239,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Change folder name of referenced paper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change folder name of referenced paper" />
+    <MESSAGE value="sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="sort" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="113" y="25" width="1252" height="834" key="CommitChangelistDialog2" timestamp="1622194238956">
+    <state x="113" y="25" width="1252" height="834" key="CommitChangelistDialog2" timestamp="1622195999097">
       <screen x="0" y="25" width="1440" height="834" />
     </state>
-    <state x="113" y="25" width="1252" height="834" key="CommitChangelistDialog2/0.25.1440.834/1440.25.1920.1055@0.25.1440.834" timestamp="1622194238956" />
+    <state x="113" y="25" width="1252" height="834" key="CommitChangelistDialog2/0.25.1440.834/1440.25.1920.1055@0.25.1440.834" timestamp="1622195999097" />
     <state x="139" y="140" width="1200" height="596" key="DiffContextDialog" timestamp="1622193383833">
       <screen x="0" y="25" width="1440" height="834" />
     </state>
@@ -231,10 +255,10 @@
       <screen x="0" y="25" width="1440" height="834" />
     </state>
     <state x="248" y="74" key="SettingsEditor/0.25.1440.834/1440.25.1920.1055@0.25.1440.834" timestamp="1622194091153" />
-    <state x="339" y="175" key="Vcs.Push.Dialog.v2" timestamp="1622194320339">
+    <state x="339" y="175" key="Vcs.Push.Dialog.v2" timestamp="1622196004323">
       <screen x="0" y="25" width="1440" height="834" />
     </state>
-    <state x="339" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.834/1440.25.1920.1055@0.25.1440.834" timestamp="1622194320339" />
+    <state x="339" y="175" key="Vcs.Push.Dialog.v2/0.25.1440.834/1440.25.1920.1055@0.25.1440.834" timestamp="1622196004323" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -246,5 +270,8 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FA$test_aae.coverage" NAME="test_aae Coverage Results" MODIFIED="1622195157483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

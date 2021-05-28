@@ -28,7 +28,7 @@ dec_im_shape = [7, 7, 32]
 dec_filters = [32, 32, 1]
 ##discriminator network
 disc_neurons = [400, 300, 1]
-epochs = 5
+epochs = 100
 batch_size = 256
 learning_rate = 0.001
 
@@ -50,7 +50,7 @@ iterator = dataset.make_initializable_iterator()
 [batch_data, batch_labels] = iterator.get_next()
 
 # Create AAE
-model = models.AAE(batch_data, batch_labels, cont_latent_size, cat_latent_size, img_size, enc_neurons, enc_filters, dec_neurons, dec_im_shape, dec_filters, disc_neurons)
+model = models.AAE1(batch_data, batch_labels, cont_latent_size, cat_latent_size, img_size, enc_neurons, enc_filters, dec_neurons, dec_im_shape, dec_filters, disc_neurons)
 
 # Start tf session
 sess = tf.Session(config=config)
@@ -85,8 +85,9 @@ for task in range(5):
     # Reinitialize optimizers
     sess.run(tf.variables_initializer(model.opt_disc.variables() + model.opt_recon.variables() + model.opt_fool.variables()))
     # Load data for training
-    data = datasets.split_mnist([2*task], [2*task+1])
-    #data = datasets.split_fashion_mnist([2 * task], [2 * task + 1])
+    data = datasets.split_mnist(np.arange(2 * (task + 1)), [])
+    #data = datasets.split_mnist(list(range(0, 2*(task+1))),[])
+    #data = datasets.split_fashion_mnist(list(range(0, 2*(task+1))),[])
     [train_data, train_labels] = data.get_train_samples()
     train_data = train_data / 255.0
     sess.run(iterator.initializer,feed_dict={data_ph: train_data, labels_ph: train_labels, batch_size_ph: batch_size,shufflebuffer_ph: train_data.shape[0],epochs_ph: epochs})
@@ -108,29 +109,17 @@ for task in range(5):
     # Generate and save generative images
     img = utils.plot_gen_imgs(sess, model, N_plot)
     plt.imshow(img)
-    fname = log_path_dt + "/gen_imgs_AAE_noGR" + str(task)
+    fname = log_path_dt + "/gen_imgs_AAE1_upp" + str(task)
     plt.savefig(fname, format="png")
     plt.close()
     print("End generate and save images for task %d" % task)
 
     # Compute accuracy
-    #Load all previous data
-    data = datasets.split_mnist(np.arange(2*(task+1)),[])
-    [train_data, train_labels] = data.get_train_samples()
-    train_data = train_data / 255.0
     acc_train_pre = utils.acc_AAE(train_data, train_labels, sess, model, batch_size, learning_rate, data_ph, labels_ph,
                               batch_size_ph, shufflebuffer_ph, epochs_ph,iterator, num_classes, cat_latent_size)
     print("Accuracy on Task{} for all previous data:{}".format(task,acc_train_pre))
     acc_pre.append(acc_train_pre)
-    #Load current data
-    data = datasets.split_mnist([2 * task], [2 * task + 1])
-    [train_data, train_labels] = data.get_train_samples()
-    train_data = train_data / 255.0
-    acc_train_curr = utils.acc_AAE(train_data, train_labels, sess, model, batch_size, learning_rate, data_ph, labels_ph,
-                              batch_size_ph, shufflebuffer_ph, epochs_ph, iterator, num_classes, cat_latent_size)
-    print("Accuracy on Task{} for current data:{}".format(task, acc_train_curr))
-    acc_curr.append(acc_train_curr)
-
+    acc_curr = []
 # Save results
 utils.result_saver1(acc_pre,acc_curr,hp_dict, log_path_dt)
 
