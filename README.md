@@ -38,6 +38,8 @@ The model is a simple model and it can be divided into three parts:
 
 ### 2.2 AAE-DGR
 
+**>>>  [Adversarial Autoencoder](https://arxiv.org/abs/1511.05644)) with Deep [Generative Replay(DGR)](https://arxiv.org/pdf/1705.08690.pdf)**
+
 ![image](https://github.com/cloudwy/FA/blob/master/photos/AAE.png)
 
 The model is a more complex model and it can be divided into two parts:
