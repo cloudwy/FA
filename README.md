@@ -28,5 +28,5 @@ My research thesis is an starting point in continual unsupervised learning. The 
 
 
 
-![AE](/Users/yun/PycharmProjects/FA/photos/AE.png)
+![image](https://github.com/cloudwy/FA/blob/master/photos/AE.png)
 
